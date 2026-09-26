@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privatlivspolitik · Animal Spotter</title>
+  <meta name="description" content="Privatlivspolitik for Animal Spotter — ingen konto, ingen server, ingen sporing.">
+  <link rel="icon" href="icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <a href="./"><img src="icon.png" alt="Animal Spotter"></a>
+    <h1>Privatlivspolitik</h1>
+    <p lang="en">Privacy policy</p>
+  </header>
+
+  <main class="wrap">
+    <nav class="lang"><a href="#da">Dansk</a><a href="#en">English</a></nav>
+
+    <!-- Keep in sync with PRIVACY.md (the English text below is the same policy). -->
+    <section id="da">
+      <p class="muted">Senest opdateret: 26. september 2026</p>
+      <p>Animal Spotter ("appen") er en feltdagbog for dyr. Den er lavet til at respektere dit privatliv:
+        <b>appen har ingen konto, ingen server og ingen analyse, reklamer eller sporing.</b></p>
+
+      <h2>Kort fortalt</h2>
+      <ul>
+        <li>Dine fund, billeder, noter og indstillinger gemmes <b>kun på din enhed</b>.</li>
+        <li>Vi (udvikleren) <b>modtager aldrig</b> dine data — der er ingen server at sende dem til.</li>
+        <li>Billeder behandles (baggrundsfjernelse, artsforslag) <b>på din enhed</b>.</li>
+        <li>De eneste netværkskald er til <b>kortfliser, klistermærke-grafik og AI-modellerne</b> — ingen af dem sender dine personlige data til os.</li>
+      </ul>
+
+      <h2>Hvad appen gemmer, og hvor</h2>
+      <p>Alt følgende ligger lokalt på din enhed (i appens private lager) og slettes, når du sletter appen:</p>
+      <ul>
+        <li><b>Fund</b> — art, race, kategori, sjældenhed, dato og noter.</li>
+        <li><b>Billeder</b> du tager eller vælger, kopieret til appens private mappe.</li>
+        <li><b>Placering</b> du knytter til et fund (koordinater og et valgfrit stednavn).</li>
+        <li><b>Indstillinger</b> — sprog, tema og kortstil.</li>
+      </ul>
+      <p>Du kan selv eksportere dine data som en JSON-sikkerhedskopi under <b>Indstillinger → Sikkerhedskopi</b>
+        og gendanne den senere. Filen laves af dig og deles, hvor du vælger — appen uploader den ingen steder.</p>
+
+      <h2>Tilladelser</h2>
+      <ul>
+        <li><b>Kamera</b> — kun til at tage et billede til et fund. Billederne bliver på din enhed.</li>
+        <li><b>Fotobibliotek</b> — kun til at vælge eksisterende billeder. Intet læses i baggrunden.</li>
+        <li><b>Placering</b> — kun når du trykker "Brug min placering" (eller åbner kortvælgeren), for at markere,
+          hvor du så dyret, og centrere kortet på dig. Placeringen gemmes med fundet på din enhed. For at gøre
+          koordinater til et stednavn spørger appen telefonens styresystem, som bruger Apples (iOS) eller Googles
+          (Android) geokodningstjeneste.</li>
+        <li><b>Tilføj til Fotos</b> — kun når du vælger at gemme dine klistermærker i dit fotobibliotek. Appen beder
+          kun om adgang til at tilføje og læser aldrig dit bibliotek.</li>
+      </ul>
+      <p>Du kan sige nej til dem alle og stadig bruge appen.</p>
+
+      <h2>AI på enheden</h2>
+      <p>Artsforslag (TensorFlow.js MobileNet) og baggrundsfjernelsen til klistermærker (ISNet-modellen via ONNX Runtime Web)
+        kører <b>helt på din enhed</b>. Kode og modelfiler hentes fra offentlige CDN'er (se nedenfor) og gemmes i cache.
+        <b>Dine billeder uploades aldrig</b> til dette.</p>
+
+      <h2>Netværkskald</h2>
+      <p>Appen henter kun data fra:</p>
+      <ul>
+        <li><b>OpenStreetMap</b> (tile.openstreetmap.org) og <b>OpenStreetMap France</b> (tile.openstreetmap.fr) —
+          kortfliser. Som ved ethvert kort modtager korttjenesten det område, du kigger på. Den modtager ikke dine fund.</li>
+        <li><b>cdnjs (Cloudflare) og jsDelivr</b> — offentlige CDN'er med kort- og AI-kodebiblioteker og klistermærke-grafik (OpenMoji).</li>
+        <li><b>Hugging Face</b> (huggingface.co) — modellen til baggrundsfjernelse.</li>
+        <li><b>Googles TensorFlow Hub / Kaggle</b> — modellen til artsforslag.</li>
+        <li><b>Expo</b> (expo.dev) — tjekker for og henter app-opdateringer. Forespørgslen indeholder tekniske
+          oplysninger som appversion, platform og et tilfældigt installations-id — aldrig dine fund eller billeder.</li>
+      </ul>
+      <p>Disse tjenester kan logge almindelige tekniske oplysninger (fx IP-adresse) efter deres egne privatlivspolitikker,
+        som det er normalt, når man henter indhold fra internettet. Appen sender dem <b>ingen personlige oplysninger</b>
+        om dig eller dine fund.</p>
+
+      <h2>Deling</h2>
+      <p>Intet forlader telefonen, medmindre du selv deler det:</p>
+      <ul>
+        <li><b>Delekort, årsopsamling og klistermærkeark</b> åbner telefonens delemenu — billedet går til den app eller person, du vælger.</li>
+        <li><b>Gem klistermærker i Fotos</b> tilføjer dem til dit fotobibliotek (kun adgang til at tilføje).</li>
+        <li><b>Spørg en AI-app</b> (når artsforslagene ikke er sikre) åbner telefonens delemenu med billedet og et spørgsmål,
+          så du kan sende det til fx ChatGPT, Claude, Google Lens eller iNaturalist. Den app behandler billedet efter sin
+          egen privatlivspolitik. Animal Spotter uploader selv intet.</li>
+      </ul>
+
+      <h2>Data vi indsamler om dig</h2>
+      <p><b>Ingen.</b> Der er ingen analyse-SDK, ingen reklamer, ingen fejlrapportering der identificerer dig, og ingen sporing.</p>
+
+      <h2>Børn</h2>
+      <p>Appen indsamler ikke persondata, viser ikke reklamer og har ingen kommunikation mellem brugere, så den er egnet til alle aldre.</p>
+
+      <h2>Ændringer</h2>
+      <p>Hvis politikken ændres, opdateres datoen øverst, og den nye version offentliggøres på samme adresse.</p>
+
+      <h2>Kontakt</h2>
+      <p>Spørgsmål om dit privatliv i Animal Spotter? Skriv til <a href="mailto:mads.m.richter@gmail.com">mads.m.richter@gmail.com</a>.</p>
+    </section>
+
+    <hr>
+
+    <section id="en" lang="en">
+      <h1>Privacy Policy</h1>
+      <p class="muted">Last updated: 26 September 2026</p>
+      <p>Animal Spotter ("the app") is a wildlife-logging field journal. We designed it to respect your privacy:
+        <b>the app has no account, no server of ours, and no analytics, ads, or tracking.</b></p>
+
+      <h2>The short version</h2>
+      <ul>
+        <li>Your sightings, photos, notes and settings are stored <b>only on your device</b>.</li>
+        <li>We (the developer) <b>never receive</b> your data — there is no backend to send it to.</li>
+        <li>Photos are processed (background removal, species suggestions) <b>on your device</b>.</li>
+        <li>The only network requests are for <b>map tiles, sticker artwork, and the on-device AI models</b> — none of which carry your personal data to us.</li>
+      </ul>
+
+      <h2>What the app stores, and where</h2>
+      <p>All of the following is kept locally on your device (in the app's private storage) and is removed when you delete the app:</p>
+      <ul>
+        <li><b>Sightings</b> you log — species, breed, category, rarity, date, notes.</li>
+        <li><b>Photos</b> you take or choose, copied into the app's private folder.</li>
+        <li><b>Location</b> you attach to a sighting (coordinates and an optional place name).</li>
+        <li><b>Preferences</b> — language, theme, and map style.</li>
+      </ul>
+      <p>You can export this data yourself as a JSON backup file via <b>Settings → Back up</b>, and restore it later.
+        That file is created by you and shared wherever you choose; the app does not upload it anywhere.</p>
+
+      <h2>Permissions we ask for</h2>
+      <ul>
+        <li><b>Camera</b> — only to take a photo for a sighting. Photos stay on your device.</li>
+        <li><b>Photo library</b> — only to pick existing photos to attach. Nothing is read in the background.</li>
+        <li><b>Location</b> — only when you tap "Use my location" (or open the map picker), to tag where you saw an animal
+          and to centre the map on you. Location is stored with that sighting on your device. To turn coordinates into a
+          place name, the app asks your phone's operating system, which uses Apple's (iOS) or Google's (Android) geocoding service.</li>
+        <li><b>Add to Photos</b> — only when you choose to save your stickers to your photo library. The app asks for
+          add-only access and never reads your library.</li>
+      </ul>
+      <p>You can decline any of these and still use the app.</p>
+
+      <h2>On-device AI</h2>
+      <p>Species suggestions (TensorFlow.js MobileNet) and the "sticker" background removal (the ISNet model via ONNX Runtime Web)
+        run <b>entirely on your device</b>. The code and model files are downloaded from public CDNs (see below) and cached.
+        <b>Your photos are never uploaded</b> for this — the processing happens locally.</p>
+
+      <h2>Network requests</h2>
+      <p>The app makes network requests only to:</p>
+      <ul>
+        <li><b>OpenStreetMap</b> (tile.openstreetmap.org) and <b>OpenStreetMap France</b> (tile.openstreetmap.fr) — to load
+          map tiles. As with any map, the map service receives the area you are viewing. It does not receive your sightings.</li>
+        <li><b>cdnjs (Cloudflare) and jsDelivr</b> — public CDNs that serve the map and AI code libraries and the sticker artwork (OpenMoji).</li>
+        <li><b>Hugging Face</b> (huggingface.co) — to download the background-removal model.</li>
+        <li><b>Google's TensorFlow Hub / Kaggle</b> — to download the species-suggestion model.</li>
+        <li><b>Expo</b> (expo.dev) — to check for and download app updates. The request carries technical details
+          such as the app version, the platform and a random installation ID — never your sightings or photos.</li>
+      </ul>
+      <p>These services may log basic technical request data (such as IP address) under their own privacy policies, as is
+        normal for loading content from the internet. The app sends them <b>no personal information</b> about you or your sightings.</p>
+
+      <h2>Sharing</h2>
+      <p>Nothing leaves your phone unless you share it yourself:</p>
+      <ul>
+        <li><b>Share cards, "Year in review" and sticker sheets</b> open your phone's share menu — the image goes to the app or person you pick.</li>
+        <li><b>Save stickers to Photos</b> adds them to your photo library (add-only access).</li>
+        <li><b>Ask an AI app</b> (when the species suggestions aren't sure) opens your phone's share menu with the photo and a
+          question, so you can send it to an app such as ChatGPT, Claude, Google Lens or iNaturalist. That app then handles
+          the photo under its own privacy policy. Animal Spotter itself uploads nothing.</li>
+      </ul>
+
+      <h2>Data we collect about you</h2>
+      <p><b>None.</b> There is no analytics SDK, no advertising, no crash reporting that identifies you, and no third-party tracking.</p>
+
+      <h2>Children</h2>
+      <p>The app does not collect personal data, show ads, or contain user-to-user communication, so it is safe for all ages.</p>
+
+      <h2>Changes</h2>
+      <p>If this policy changes, the "Last updated" date above will change and the new version will be published at the same URL.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about your privacy in Animal Spotter? Email <a href="mailto:mads.m.richter@gmail.com">mads.m.richter@gmail.com</a>.</p>
+    </section>
+
+    <footer>
+      <p><a href="./">Animal Spotter</a> · © 2026</p>
+    </footer>
+  </main>
+</body>
+</html>
