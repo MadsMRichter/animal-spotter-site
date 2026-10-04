@@ -23,7 +23,7 @@
 
     <!-- Keep in sync with PRIVACY.md (the English text below is the same policy). -->
     <section id="da">
-      <p class="muted">Senest opdateret: 26. september 2026</p>
+      <p class="muted">Senest opdateret: 27. september 2026</p>
       <p>Animal Spotter ("appen") er en feltdagbog for dyr. Den er lavet til at respektere dit privatliv:
         <b>appen har ingen konto, ingen server og ingen analyse, reklamer eller sporing.</b></p>
 
@@ -60,7 +60,7 @@
       <p>Du kan sige nej til dem alle og stadig bruge appen.</p>
 
       <h2>AI på enheden</h2>
-      <p>Artsforslag (TensorFlow.js MobileNet) og baggrundsfjernelsen til klistermærker (ISNet-modellen via ONNX Runtime Web)
+      <p>Artsforslag (Googles SigLIP 2-model) og baggrundsfjernelsen til klistermærker (ISNet-modellen), begge via ONNX Runtime Web,
         kører <b>helt på din enhed</b>. Kode og modelfiler hentes fra offentlige CDN'er (se nedenfor) og gemmes i cache.
         <b>Dine billeder uploades aldrig</b> til dette.</p>
 
@@ -70,8 +70,8 @@
         <li><b>OpenStreetMap</b> (tile.openstreetmap.org) og <b>OpenStreetMap France</b> (tile.openstreetmap.fr) —
           kortfliser. Som ved ethvert kort modtager korttjenesten det område, du kigger på. Den modtager ikke dine fund.</li>
         <li><b>cdnjs (Cloudflare) og jsDelivr</b> — offentlige CDN'er med kort- og AI-kodebiblioteker og klistermærke-grafik (OpenMoji).</li>
-        <li><b>Hugging Face</b> (huggingface.co) — modellen til baggrundsfjernelse.</li>
-        <li><b>Googles TensorFlow Hub / Kaggle</b> — modellen til artsforslag.</li>
+        <li><b>Hugging Face</b> (huggingface.co) — de to AI-modeller (baggrundsfjernelse og artsforslag), én gang; derefter gemmes de på telefonen.</li>
+        <li><b>Photon</b> (photon.komoot.io, drevet af komoot) — kun når du søger efter et sted på kortet: den modtager det, du skriver, og kortets omtrentlige midtpunkt (ca. 10 km nøjagtigt) og slår stedet op i OpenStreetMaps data. Virker den ikke, får <b>OpenStreetMaps Nominatim</b> (nominatim.openstreetmap.org) den samme søgning i stedet.</li>
         <li><b>Expo</b> (expo.dev) — tjekker for og henter app-opdateringer. Forespørgslen indeholder tekniske
           oplysninger som appversion, platform og et tilfældigt installations-id — aldrig dine fund eller billeder.</li>
       </ul>
@@ -106,7 +106,7 @@
 
     <section id="en" lang="en">
       <h1>Privacy Policy</h1>
-      <p class="muted">Last updated: 26 September 2026</p>
+      <p class="muted">Last updated: 27 September 2026</p>
       <p>Animal Spotter ("the app") is a wildlife-logging field journal. We designed it to respect your privacy:
         <b>the app has no account, no server of ours, and no analytics, ads, or tracking.</b></p>
 
@@ -142,7 +142,7 @@
       <p>You can decline any of these and still use the app.</p>
 
       <h2>On-device AI</h2>
-      <p>Species suggestions (TensorFlow.js MobileNet) and the "sticker" background removal (the ISNet model via ONNX Runtime Web)
+      <p>Species suggestions (Google's SigLIP 2 model) and the "sticker" background removal (the ISNet model), both via ONNX Runtime Web,
         run <b>entirely on your device</b>. The code and model files are downloaded from public CDNs (see below) and cached.
         <b>Your photos are never uploaded</b> for this — the processing happens locally.</p>
 
@@ -152,8 +152,8 @@
         <li><b>OpenStreetMap</b> (tile.openstreetmap.org) and <b>OpenStreetMap France</b> (tile.openstreetmap.fr) — to load
           map tiles. As with any map, the map service receives the area you are viewing. It does not receive your sightings.</li>
         <li><b>cdnjs (Cloudflare) and jsDelivr</b> — public CDNs that serve the map and AI code libraries and the sticker artwork (OpenMoji).</li>
-        <li><b>Hugging Face</b> (huggingface.co) — to download the background-removal model.</li>
-        <li><b>Google's TensorFlow Hub / Kaggle</b> — to download the species-suggestion model.</li>
+        <li><b>Hugging Face</b> (huggingface.co) — to download the two AI models (background removal and species suggestions), once; they are then kept on the device.</li>
+        <li><b>Photon</b> (photon.komoot.io, run by komoot) — only when you search for a place on the map: it receives what you type and the rough centre of the map (to about 10 km) and looks the place up in OpenStreetMap data. If it is unavailable, <b>OpenStreetMap's Nominatim</b> (nominatim.openstreetmap.org) receives the same search instead.</li>
         <li><b>Expo</b> (expo.dev) — to check for and download app updates. The request carries technical details
           such as the app version, the platform and a random installation ID — never your sightings or photos.</li>
       </ul>
